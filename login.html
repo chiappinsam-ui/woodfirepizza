@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owner Login</title>
+    <style>
+      nav {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+      }
+
+      .btn-login {
+        background-color: #333;
+        color: white !important;
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        margin-left: auto;
+      }
+
+      .btn-login:hover {
+        background-color: #555;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .login-card {
+        max-width: 420px;
+        margin: 80px auto;
+        padding: 24px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .login-card h1 {
+        margin-top: 0;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .login-card label {
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+        color: #444;
+      }
+
+      .login-card input[type='password'] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .login-card button {
+        margin-top: 16px;
+        width: 100%;
+        padding: 12px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .login-card button:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="catering.html">Catering</a>
+      <a href="bookings.html">Bookings</a>
+      <a href="contact.html">Contact</a>
+
+      <a href="login.html" class="btn-login">Owner Login</a>
+    </nav>
+
+    <div class="login-card">
+      <h1>Owner Login</h1>
+      <p>Enter your owner password to continue.</p>
+      <form>
+        <label for="owner-password">Password</label>
+        <input id="owner-password" name="password" type="password" placeholder="Owner password" />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </body>
+</html>
