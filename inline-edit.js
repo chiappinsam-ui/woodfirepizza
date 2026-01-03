@@ -74,7 +74,11 @@
       if (error) return alert(error.message);
 
       const { data: pub } = supabase.storage.from("gallery").getPublicUrl(path);
-      imgEl.src = pub.publicUrl;
+      const url = pub.publicUrl + (pub.publicUrl.includes("?") ? "&" : "?") + "v=" + Date.now();
+      imgEl.removeAttribute("srcset");
+      imgEl.removeAttribute("sizes");
+      imgEl.src = url;
+      imgEl.decode?.().catch(() => {});
     };
 
     input.click();

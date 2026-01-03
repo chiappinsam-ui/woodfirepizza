@@ -12,6 +12,9 @@
     if (!path) return;
 
     const { data: pub } = supabase.storage.from("gallery").getPublicUrl(path);
-    img.src = pub.publicUrl;
+    const url = pub.publicUrl + (pub.publicUrl.includes("?") ? "&" : "?") + "v=" + Date.now();
+    img.removeAttribute("srcset");
+    img.removeAttribute("sizes");
+    img.src = url;
   });
 })();
